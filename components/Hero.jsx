@@ -28,7 +28,7 @@ const Hero = () => {
               problemas complejos."
             </p>
             {/*botones */}
-            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0">
+            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contact">
                 <Button className="gap-x-2">
                   Contactame
@@ -42,9 +42,41 @@ const Hero = () => {
                 </Button>
               </Link>
             </div>
+            {/*Redes */}
+            <Socials
+              containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+            />
           </div>
           {/*imagen */}
-          <div className="hidden xl:flex relative">imagen</div>
+          <div className="hidden xl:flex relative">
+            {/*badge 1 */}
+            <Badge
+              containerStyles="absolute top-[24%] -left-[5rem]"
+              icon={<RiBriefcase4Fill />}
+              endCountNum={2}
+              badgeText="Años de Experiencia"
+            />
+            {/*badge 2*/}
+            <Badge
+              containerStyles="absolute top-[80%] -left-[1rem]"
+              icon={<RiTodoFill />}
+              endCountNum={11}
+              badgeText="Proyectos Finalizados"
+            />
+            {/*badge 3 */}
+            <Badge
+              containerStyles="absolute top-[55%] -right-8"
+              icon={<RiTeamFill />}
+              endCountNum={21}
+              badgeText="Clientes Felicess"
+            />
+            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute top-8 -right-2"></div>
+            <DevImg
+              containerStyles="bg-hero_shape w-[510px] h-[640px] bg-no-repeat relative bg-center right-4"
+              imgSrc="/hero/developer.png"
+            />
+          </div>
         </div>
         {/*icono*/}
         <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12">
